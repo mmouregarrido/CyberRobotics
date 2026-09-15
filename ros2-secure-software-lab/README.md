@@ -96,7 +96,7 @@ ros2-secure-software-lab/
 ├── .gitignore
 ├── README.md                    # Project documentation
 └── requirements.txt             # Environment dependencies
-
+```
 
 ### Key Security Controls
 
