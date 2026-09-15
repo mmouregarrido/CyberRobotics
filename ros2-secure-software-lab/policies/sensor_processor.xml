@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<sros2_policy version="0.2.0">
+  <profiles>
+    <!-- Restricted profile for the sensor_processor node -->
+    <profile node="sensor_processor" ns="/">
+      <services reply="DENY" request="DENY" />
+      <topics publish="ALLOW">
+        <topic>/cmd_vel</topic>
+      </topics>
+      <topics subscribe="ALLOW">
+        <topic>/scan</topic>
+      </topics>
+      <actions call="DENY" execute="DENY" />
+    </profile>
+  </profiles>
+</sros2_policy>

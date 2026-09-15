@@ -1,0 +1,23 @@
+graph TD
+    subgraph External_Untrusted [" Untrusted Environment (Wi-Fi / Telemetry) "]
+        Op["👤 Human Operator (UI)"]
+    end
+
+    subgraph Trust_Boundary [" 🛑 TRUST BOUNDARY 🛑 "]
+        style Trust_Boundary fill:none,stroke:#e74c3c,stroke-width:3px,stroke-dasharray: 5 5
+    end
+
+    subgraph Internal_OT [" Internal Control Zone (CAN Bus / ROS 2 OT) "]
+        N1["⚙️ /teleop_node"]
+        N2["⚙️ /planner_node"]
+        P1[("📄 Param Server (.yaml)")]
+        S1["📷 Sensors (Lidar/Odom)"]
+        M1["⚡ Actuators / Motors"]
+    end
+
+    Op -->|Topic /cmd_vel_json| N1
+    N1 -->|Validated: Topic /cmd_vel| N2
+    S1 -->|Topic /scan & /odom| N2
+    P1 -->|Configuration| N1
+    P1 -->|Configuration| N2
+    N2 -->|Control Commands| M1
