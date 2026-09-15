@@ -114,8 +114,8 @@ Prerequisites
 
 1. Clone the repository:
 ```bash
-git clone [https://github.com/mmouregarrido/CyberRobotics/tree/main/ros2-secure-software-lab/](https://github.com/mmouregarrido/CyberRobotics/tree/main/ros2-secure-software-lab/)
-cd ros2-secure-software-lab
+git clone https://github.com/mmouregarrido/CyberRobotics/tree/main/ros2-secure-software-lab/
+cd CyberRobotics/ros2-secure-software-lab
 ```
 
 2. Install Python dependencies:
