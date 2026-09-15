@@ -63,17 +63,21 @@ graph TD
 ```
 
 ### STRIDE Risk Matrix
-Category,Element,Identified Threat,Physical Kinetic Impact
-Spoofing,/odom topic,Injected fake odometry packets.,Trajectory deviation and high-speed obstacle impact.
-Tampering,/cmd_vel topic,Modification of velocity payloads in transit.,Sudden uncontrolled acceleration or erratic turning.
-Repudiation,Diagnostic Logs,Log deletion or tampering.,Loss of forensic audit capabilities after a kinetic incident.
-Information Disclosure,Camera streams,Eavesdropping on unencrypted Wi-Fi.,Industrial espionage and environmental privacy breach.
-Denial of Service,DDS Message Bus,Packet flooding (DoS).,Loss of keep-alive signals and blocked emergency stopping.
-Elevation of Privilege,Python Node (root),Arbitrary shell execution.,Full actuator takeover and safety brake override.
 
+| Category | Element | Identified Threat | Physical Kinetic Impact |
+| :--- | :--- | :--- | :--- |
+| **Spoofing** | `/odom` topic | Injected fake odometry packets. | Trajectory deviation and high-speed obstacle impact. |
+| **Tampering** | `/cmd_vel` topic | Modification of velocity payloads in transit. | Sudden uncontrolled acceleration or erratic turning. |
+| **Repudiation** | Diagnostic Logs | Log deletion or tampering. | Loss of forensic audit capabilities after a kinetic incident. |
+| **Information Disclosure** | Camera streams | Eavesdropping on unencrypted Wi-Fi. | Industrial espionage and environmental privacy breach. |
+| **Denial of Service** | DDS Message Bus | Packet flooding (DoS). | Loss of keep-alive signals and blocked emergency stopping. |
+| **Elevation of Privilege** | Python Node (root) | Arbitrary shell execution. | Full actuator takeover and safety brake override. |
 
+---
 
 ### Project Structure
+
+```text
 ros2-secure-software-lab/
 ├── .github/
 │   └── workflows/
@@ -110,7 +114,7 @@ Prerequisites
 
 1. Clone the repository:
 ```bash
-git clone [https://github.com/your-organization/ros2-secure-software-lab.git](https://github.com/your-organization/ros2-secure-software-lab.git)
+git clone [https://github.com/mmouregarrido/CyberRobotics/tree/main/ros2-secure-software-lab/](https://github.com/mmouregarrido/CyberRobotics/tree/main/ros2-secure-software-lab/)
 cd ros2-secure-software-lab
 ```
 
